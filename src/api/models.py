@@ -13,7 +13,7 @@ class Movies(db.Model):
     tmdb_id = db.Column(db.Integer, unique=False, nullable=False)
 
     def __repr__(self):
-        return f'<Movies {self.title}>'
+        return f'<Movies {self.movie_title}>'
 
     def serialize(self):
         return {
@@ -58,7 +58,7 @@ class Languages(db.Model):
     lang_name = db.Column(db.String(500), unique=False, nullable=False)
     
     def __repr__(self):
-        return f'<Extras {self.extras_title}>'
+        return f'<Languages {self.lang_name}>'
 
     def serialize(self):
         return {
